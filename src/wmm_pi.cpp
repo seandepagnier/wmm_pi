@@ -468,6 +468,8 @@ void wmm_pi::SetPositionFix(PlugIn_Position_Fix &pfix)
             dc.SetTextForeground(cf);
             wxSize s = dc.GetTextExtent(NewVal);
             dc.DrawText(NewVal, (_img_wmm_live->GetWidth() - s.GetWidth()) / 2, (_img_wmm_live->GetHeight() - s.GetHeight()) / 2);
+
+            dc.SelectObject(wxNullBitmap);
             SetToolbarToolBitmaps(m_leftclick_tool_id, &icon, &icon);
       }
 
